@@ -1,0 +1,17 @@
+# Example config for gh-identity plugin.
+# Point MOLECULE_GH_IDENTITY_CONFIG_FILE at this file.
+
+roles:
+  # Each role → the GitHub user @me calls should be rewritten to.
+  # Role names match the `role` field set on workspace metadata; the
+  # plugin's SanitizeRole() normalizes whitespace/case, so you can
+  # write these in a consistent style regardless of agent input.
+  PMM-Lead:       { owner: HongmingWang-Rabbit }
+  Dev-Lead:       { owner: HongmingWang-Rabbit }
+  Research-Lead:  { owner: HongmingWang-Rabbit }
+  Marketing-Lead: { owner: HongmingWang-Rabbit }
+
+  # Catch-all for roles not explicitly listed. If you omit this, unknown
+  # roles get their `--assignee @me` stripped entirely (safer than
+  # wrong-attribution).
+  default:        { owner: HongmingWang-Rabbit }

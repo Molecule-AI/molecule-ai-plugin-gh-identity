@@ -82,8 +82,8 @@ func TestResolveOwner_FallbackChain(t *testing.T) {
 		role, want string
 	}{
 		{"PMM", "alice"},
-		{"pmm", "alice"},          // case-insensitive
-		{"Pmm", "alice"},          // case-insensitive (sanitized form)
+		{"pmm", "alice"}, // case-insensitive
+		{"Pmm", "alice"}, // case-insensitive (sanitized form)
 		{"unknown-role", "bob"},
 		{"", "bob"},
 	}
